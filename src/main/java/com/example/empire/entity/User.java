@@ -4,10 +4,9 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
-public class Users {
 
+public class User {
 
-    public Users(){};
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +18,12 @@ public class Users {
     @Column
     private boolean hobby;
 
-    public Users(String name, String surname, boolean hobby) {
+    public User() {
+    }
+
+    ;
+
+    public User(String name, String surname, boolean hobby) {
         this.name = name;
         this.surname = surname;
         this.hobby = hobby;
@@ -57,4 +61,5 @@ public class Users {
         this.hobby = hobby;
     }
 }
+
 
